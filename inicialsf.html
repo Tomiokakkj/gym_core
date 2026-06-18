@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Core Fit Academia</title>
+    <title>Gym Core Academia</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="inicialsf.css">
@@ -23,11 +23,13 @@
     <!-- ========================================= -->
     <header>
 
-        <h1>Core Fit</h1>
+        <h1>Gym Core</h1>
 
         <nav class="link">
             <a href="cadastrosf.html">Cadastro</a>
             <a href="loginsf.html">Login</a>
+            <!-- Botão do Carrinho adicionado para integração com o JS -->
+            <button id="btn-carrinho" style="margin-left: 20px; cursor: pointer; padding: 5px 10px;">🛒 Carrinho (<span id="contador-carrinho">0</span>)</button>
         </nav>
 
     </header>
@@ -71,6 +73,7 @@
             </a>
 
             <h3>Psycho Extreme - R$ 60,00</h3>
+            <button class="add-to-cart" data-nome="Psycho Extreme" data-preco="60.00">Adicionar ao Carrinho</button>
         </div>
 
         <div class="pdr">
@@ -81,6 +84,7 @@
             </a>
 
             <h3>Creatina Hardcore - R$ 50,00</h3>
+            <button class="add-to-cart" data-nome="Creatina Hardcore" data-preco="50.00">Adicionar ao Carrinho</button>
         </div>
 
         <div class="pdr">
@@ -91,6 +95,7 @@
             </a>
 
             <h3>Whey Pure - R$ 70,00</h3>
+            <button class="add-to-cart" data-nome="Whey Pure" data-preco="70.00">Adicionar ao Carrinho</button>
         </div>
 
     </div>
@@ -105,7 +110,8 @@
 
             <img src="https://m.media-amazon.com/images/I/41ehnI5J3PL._SS520_.jpg">
 
-            <h3>Édgide - R$ 80,00</h3>
+            <h3>Égide - R$ 80,00</h3>
+            <button class="add-to-cart" data-nome="Égide" data-preco="80.00">Adicionar ao Carrinho</button>
         </div>
 
         <div class="pdr">
@@ -114,6 +120,7 @@
             <img src="https://i.zst.com.br/thumbs/45/3e/37/1948953608.jpg">
 
             <h3>Black Skull - R$ 50,00</h3>
+            <button class="add-to-cart" data-nome="Black Skull" data-preco="50.00">Adicionar ao Carrinho</button>
         </div>
 
         <div class="pdr">
@@ -122,6 +129,7 @@
             <img src="https://i.zst.com.br/thumbs/45/2b/32/1950299515.jpg">
 
             <h3>Gold Standard - R$ 90,00</h3>
+            <button class="add-to-cart" data-nome="Gold Standard" data-preco="90.00">Adicionar ao Carrinho</button>
         </div>
 
     </div>
@@ -137,6 +145,7 @@
             <img src="https://cdn.shopify.com/s/files/1/0742/9632/8446/files/pre-treino-prime-md-300g-2232530.png?v=1779940749">
 
             <h3>Prime - R$ 100,00</h3>
+            <button class="add-to-cart" data-nome="Prime" data-preco="100.00">Adicionar ao Carrinho</button>
         </div>
 
         <div class="pdr">
@@ -145,6 +154,7 @@
             <img src="https://img.br.my-best.com/product_images/cdda8bfbcfeaeacc02bca827569230d2.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=74374c60d6e89ed1fa151da22f50b8d3">
 
             <h3>Athletica Nutrition - R$ 70,00</h3>
+            <button class="add-to-cart" data-nome="Athletica Nutrition" data-preco="70.00">Adicionar ao Carrinho</button>
         </div>
 
         <div class="pdr">
@@ -153,6 +163,7 @@
             <img src="https://i.zst.com.br/thumbs/45/1b/33/1948971102.jpg">
 
             <h3>Dux Concentrado - R$ 85,00</h3>
+            <button class="add-to-cart" data-nome="Dux Concentrado" data-preco="85.00">Adicionar ao Carrinho</button>
         </div>
 
     </div>
@@ -177,6 +188,7 @@
             </ul>
 
             <h2>R$ 50,00/mês</h2>
+            <button class="add-to-cart" data-nome="Plano Simples" data-preco="50.00">Selecionar Plano</button>
 
         </div>
 
@@ -194,6 +206,7 @@
             </ul>
 
             <h2>R$ 90,00/mês</h2>
+            <button class="add-to-cart" data-nome="Plano Intermediário" data-preco="90.00">Selecionar Plano</button>
 
         </div>
 
@@ -211,13 +224,29 @@
             </ul>
 
             <h2>R$ 150,00/mês</h2>
+            <button class="add-to-cart" data-nome="Plano Premium" data-preco="150.00">Selecionar Plano</button>
 
         </div>
 
     </div>
 
     <!-- ========================================= -->
-    <!-- RODAPÉ -->
+    <!-- ESTRUTURA VISUAL DO CARRINHO (LATERAL) -->
+    <!-- ========================================= -->
+    <div id="carrinho-aba" class="carrinho-aba fechar">
+        <div class="carrinho-header">
+            <h2>Seu Carrinho</h2>
+            <button id="fechar-carrinho">&times;</button>
+        </div>
+        <div id="itens-carrinho"></div>
+        <div class="carrinho-footer">
+            <h3>Total: R$ <span id="total-carrinho">0,00</span></h3>
+            <button id="finalizar-compra">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- RODAPÉ (Corrigido sem duplicidade) -->
     <!-- ========================================= -->
     <footer>
 
@@ -235,28 +264,11 @@
             </ul>
 
         </div>
-            <div class="produtos">
-            <h2>Produtos</h2>
-            <div class="produto-item">
-              <h3>Camiseta</h3>
-              <p>R$ 50,00</p>
-              <button onclick="adicionarAoCarrinho('Camiseta', 50.00)">Comprar</button>
-            </div>
-            <div class="produto-item">
-              <h3>Tênis</h3>
-              <p>R$ 150,00</p>
-              <button onclick="adicionarAoCarrinho('Tênis', 150.00)">Comprar</button>
-            </div>
-          </div>
-          <div class="carrinho">
-            <h2>Seu Carrinho</h2>
-            <ul id="lista-carrinho"></ul>
-            <h3>Total: R$ <span id="total-carrinho">0.00</span></h3>
-            <button onclick="limparCarrinho()">Esvaziar Carrinho</button>
-          </div>
 
     </footer>
 
+    <!-- Scripts carregados ao final do body -->
+    <script src="Umteste.js"></script>
 </body>
 
 </html>
