@@ -22,7 +22,7 @@ img {
 /* HEADER E NAVEGAÇÃO                        */
 /* ========================================= */
 header {
-    background: linear-gradient(#e0d108ee, #d0af08da);
+    background: linear-gradient(#0fbda6ee, #06d3e6da);
     color: white;
     padding: 15px 20px;
     display: flex;
@@ -60,15 +60,15 @@ nav.link a:hover {
 /* Botão do Carrinho no Header */
 #btn-carrinho {
     background-color: #000000;
-    color: #FFD700;
-    border: 2px solid #FFD700;
+    color: #06d3e6da;
+    border: 2px solid #06d3e6da;
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.2s ease;
 }
 
 #btn-carrinho:hover {
-    background-color: #FFD700;
+    background-color: #06d3e6da;
     color: #000000;
 }
 
@@ -82,7 +82,7 @@ nav.link a:hover {
     margin: 20px auto;
     overflow: hidden;
     border-radius: 10px;
-    border: 5px solid #FFD700;
+    border: 5px solid #06d3e6da;
 }
 
 .scroller {
@@ -127,7 +127,7 @@ nav.link a:hover {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    border: 5px solid #FFD700;
+    border: 5px solid #06d3e6da;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -178,7 +178,7 @@ nav.link a:hover {
     padding: 25px;
     border-radius: 10px;
     text-align: center;
-    border: 5px solid #FFD700;
+    border: 5px solid #06d3e6da;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -206,7 +206,7 @@ nav.link a:hover {
     width: 100%;
     padding: 10px;
     background-color: #000000;
-    color: #FFD700;
+    color: #06d3e6da;
     border: 2px solid #000000;
     border-radius: 5px;
     font-weight: bold;
@@ -216,9 +216,9 @@ nav.link a:hover {
 }
 
 .add-to-cart:hover {
-    background-color: #FFD700;
+    background-color: #06d3e6da;
     color: #000000;
-    border-color: #FFD700;
+    border-color: #06d3e6da;
 }
 
 /* ========================================= */
@@ -302,7 +302,7 @@ nav.link a:hover {
 /* RODAPÉ                                    */
 /* ========================================= */
 footer {
-    background: linear-gradient(#e0d108ee, #d0af08da);
+    background: linear-gradient(#0fbda6ee, #06d3e6da);
     color: white;
     padding: 25px 20px;
     margin-top: 50px;
