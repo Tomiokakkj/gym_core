@@ -85,13 +85,16 @@ button:hover{
 /* ========================================= */
 
 .link{
-    display: inline-block;
-    padding: 8px 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    margin-right: 25px;
     font-size: 14px;
     background: linear-gradient(135deg, #06d3e6da);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 9px;
     margin-bottom: 15px;
 }
 
@@ -117,5 +120,7 @@ button:hover{
     color: white;
     text-decoration: none;
     border-radius: 8px;
-    margin-bottom: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
