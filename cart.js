@@ -101,14 +101,14 @@ function atualizarCarrinho() {
 window.alterarQuantidade = alterarQuantidade;
 window.removerDoCarrinho = removerDoCarrinho;
 
-// Finalizar Compra
-btnFinalizar.addEventListener('click', () => {
+btnFinalizar.addEventListener("click", () => {
+    window.location.href = "Compra.html";
+});
+btnFinalizar.addEventListener("click", () => {
     if (carrinho.length === 0) {
         alert("Seu carrinho está vazio!");
         return;
     }
-    alert("Compra realizada com sucesso! Obrigado por comprar na Core Fit.");
-    carrinho = [];
-    atualizarCarrinho();
-    carrinhoAba.classList.add('fechar');
+
+    window.location.href = "Compra.html";
 });
