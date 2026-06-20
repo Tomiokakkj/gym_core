@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+    color: white;
+    
+}
+
+.titulo{
+    text-align: center;
+}
+
+
+.CTZ{
+    width: 400px;
+    min-height: 150px;
+    background-color: white;
+    color: black;
+    padding: 20px;         
+    border-radius: 10px;  
+    margin: 50px auto;   
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.CTZ button{
+    margin-left: 95px;
+}
+button{
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #0fbda6ee, #06d3e6da);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0, 3);
+}
+.bb{
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 14px;
+    background: linear-gradient(135deg, #06d3e6da);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
