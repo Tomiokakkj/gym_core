@@ -1,3 +1,6 @@
+/* ===========================
+   RESET
+=========================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +9,33 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #000;
 }
 
+/* ===========================
+   TÍTULO
+=========================== */
 .pl {
     text-align: center;
-    color: white;
+    color: #fff;
     margin: 40px 0;
 }
+/* ===========================
+   Link inicio
+=========================== */
+.Voltar{
+    text-align: center;
+}
+.Voltar a{
+     color: white;
+    text-decoration: none;
+}
 
+
+
+/* ===========================
+   PLANOS
+=========================== */
 .Planos {
     display: flex;
     justify-content: center;
@@ -25,15 +46,17 @@ body {
 
 .plano {
     width: 280px;
-    background-color: white;
+    background: #fff;
     border: 5px solid #06d3e6da;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .plano h2 {
-    color: black;
+    color: #000;
     margin-bottom: 15px;
 }
 
@@ -47,60 +70,143 @@ body {
     margin-bottom: 8px;
 }
 
+/* ===========================
+   BOTÕES
+=========================== */
 .add-to-cart,
-#finalizar-compra {
-    width: 100%;
-    padding: 10px;
-    margin-top: 15px;
-    background-color: black;
-    color: #06d3e6da;
-    border: 2px solid black;
+#finalizar-compra,
+.btn-carrinho {
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-.add-to-cart:hover,
-#finalizar-compra:hover {
-    background-color: #06d3e6da;
-    color: black;
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    margin-top: auto;
+    background: #000;
+    color: #06d3e6da;
+    border: 2px solid #000;
 }
 
+.add-to-cart:hover {
+    background: #06d3e6da;
+    color: #000;
+}
+
+/* Botão do carrinho */
+.btn-carrinho {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    padding: 12px 18px;
+    background: #2f9aa0;
+    color: #fff;
+}
+
+.btn-carrinho:hover {
+    background: #23777c;
+}
+
+/* ===========================
+   CARRINHO LATERAL
+=========================== */
 .carrinho-aba {
     position: fixed;
     top: 0;
     right: 0;
     width: 350px;
-    height: 100%;
-    background-color: white;
+    max-width: 100%;
+    height: 100vh;
+    background: #fff;
     color: #333;
-    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.4);
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    z-index: 9999;
 }
 
 .carrinho-aba.fechar {
     transform: translateX(100%);
 }
 
+/* Cabeçalho */
+.carrinho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #eee;
+}
+
+.carrinho-header h2 {
+    margin: 0;
+}
+
+#fechar-carrinho {
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+}
+
+#fechar-carrinho:hover {
+    color: red;
+}
+
+/* Lista de itens */
 #itens-carrinho {
     flex: 1;
     overflow-y: auto;
     margin: 20px 0;
 }
 
-#fechar-carrinho {
-    background: none;
-    border: none;
-    font-size: 28px;
-    cursor: pointer;
+.item-no-carrinho {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
 }
 
+/* Rodapé do carrinho */
+.carrinho-footer {
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+}
+
+.carrinho-footer h3 {
+    margin-bottom: 15px;
+}
+
+#finalizar-compra {
+    width: 100%;
+    padding: 12px;
+    background: #2f9aa0;
+    color: #fff;
+    font-size: 16px;
+}
+
+#finalizar-compra:hover {
+    background: #23777c;
+}
+
+/* ===========================
+   RODAPÉ DA PÁGINA
+=========================== */
 footer {
     margin-top: 50px;
-    padding: 70px;
+    padding: 50px;
     background: linear-gradient(#0fbda6ee, #06d3e6da);
-    color: white;
+    color: #fff;
 }
 
 .fot {
