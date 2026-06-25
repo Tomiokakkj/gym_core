@@ -30,7 +30,7 @@ body{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Corrigido: era '10pxx' e a opacidade estava como '0, 4' */
     text-align: center;
     color: white;
-    border: 5px solid #06d3e6da;
+    border: 5px solid #0fbda6ee;
 }
 
 .container h2{
