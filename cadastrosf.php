@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if(isset($_POST['submit']))
@@ -10,19 +9,31 @@ if(isset($_POST['submit']))
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$password')");
+    $verificar_email = mysqli_query($conexao, "SELECT * FROM usuarios WHERE email = '$email'");
+    
+    $verificar_nome = mysqli_query($conexao, "SELECT * FROM usuarios WHERE nome = '$nome'");
 
-    if($result) {
-
-        $_SESSION['usuario_nome'] = $nome;
-        $_SESSION['usuario_email'] = $email;
-        $_SESSION['logado'] = true;
-
-
-        header("Location: inicialsf.html");
+    if(mysqli_num_rows($verificar_email) > 0) {
+        echo "<script>alert('Este e-mail já está cadastrado!'); window.location.href='cadastrosf.php';</script>";
         exit();
-    } else {
-        echo "Erro ao cadastrar: " . mysqli_error($conexao);
+    } 
+    elseif(mysqli_num_rows($verificar_nome) > 0) {
+        echo "<script>alert('Este nome de usuário já está em uso!'); window.location.href='cadastrosf.php';</script>";
+        exit();
+    } 
+    else {
+        $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, senha) VALUES ('$nome', '$email', '$password')");
+
+        if($result) {
+            $_SESSION['usuario_nome'] = $nome;
+            $_SESSION['usuario_email'] = $email;
+            $_SESSION['logado'] = true;
+
+            header("Location: inicialsf.php");
+            exit();
+        } else {
+            echo "Erro ao cadastrar: " . mysqli_error($conexao);
+        }
     }
 }
 ?>
