@@ -218,3 +218,22 @@ footer {
 .fot ul {
     list-style: none;
 }
+    .Voltar {
+        background-color: #000000;
+        color: #06d3e6da;
+        border: 2px solid #06d3e6da;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        width: 50px;
+        display: block;
+        margin: 20px auto; 
+    }
+
+    .Voltar a{
+        background-color: #05838f;
+        color: #000000;
+        align-items: center;
+        
+
+    }
