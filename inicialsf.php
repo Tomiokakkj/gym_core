@@ -1,28 +1,27 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-    <!-- Configurações básicas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gym Core Academia</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="inicialsf.css">
 
-    <!-- Ícone da página -->
     <link rel="shortcut icon"
         href="https://png.pngtree.com/png-vector/20190901/ourlarge/pngtree-excercise-icon-in-trendy-style-isolated-background-png-image_1718600.jpg">
+    
+
 </head>
 
 <body>
 
-    <!-- ========================================= -->
-    <!-- CABEÇALHO -->
-    <!-- ========================================= -->
     <header>
-
+        
         <h1>Gym Core</h1>
 
         <nav class="link">
@@ -30,15 +29,19 @@
             <a href="loginsf.php">Login</a>
             <a href="Plano.html">Planos</a>
             <a href="Mais.html">Mais</a>
-            <!-- Botão do Carrinho adicionado para integração com o JS -->
-            <button id="btn-carrinho" style="margin-left: 20px; cursor: pointer; padding: 5px 10px;">🛒 Carrinho (<span id="contador-carrinho">0</span>)</button>
+            
+        <div class="nav-direita">
+    <?php if(isset($_SESSION['logado']) && $_SESSION['logado'] === true): ?>
+        <span class="nome-usuario">Olá, <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>!</span>
+        <a href="sair.php" style="color: #ff4d4dc0; margin-left: 10px; text-decoration: none; font-size: 0.85rem; font-weight: bold;">[Sair]</a>
+    <?php endif; ?>
+
+    <button id="btn-carrinho" style="margin-left: 20px; cursor: pointer; padding: 5px 10px;">🛒 Carrinho (<span id="contador-carrinho">0</span>)</button>
+        </div>
         </nav>
 
     </header>
 
-    <!-- ========================================= -->
-    <!-- CARROSSEL -->
-    <!-- ========================================= -->
     <div class="container-carrossel">
 
         <div class="scroller" id="trilho">
@@ -60,9 +63,6 @@
         <button id="btn-proximo" class="seta seta-proxima">❯</button>
     </div>
 
-    <!-- ========================================= -->
-    <!-- PRODUTOS - LINHA 1 -->
-    <!-- ========================================= -->
     <div class="produtos">
 
         <div class="pdr">
@@ -100,9 +100,6 @@
 
     </div>
 
-    <!-- ========================================= -->
-    <!-- PRODUTOS - LINHA 2 -->
-    <!-- ========================================= -->
     <div class="produtos">
 
         <div class="pdr">
@@ -134,9 +131,6 @@
 
     </div>
 
-    <!-- ========================================= -->
-    <!-- PRODUTOS - LINHA 3 -->
-    <!-- ========================================= -->
     <div class="produtos">
 
         <div class="pdr">
@@ -167,10 +161,7 @@
         </div>
 
     </div>
-     <!-- ========================================= -->
-<!-- PRODUTOS - LINHA 4 -->
-<!-- ========================================= -->
-<div class="produtos">
+     <div class="produtos">
 
     <div class="pdr">
         <h2>Hipercalórico</h2>
@@ -207,9 +198,6 @@
 
 </div>
 
-<!-- ========================================= -->
-<!-- PRODUTOS - LINHA 5 -->
-<!-- ========================================= -->
 <div class="produtos">
 
     <div class="pdr">
@@ -247,13 +235,6 @@
 
 </div>
 
-    <!-- ========================================= -->
-    <!-- PLANOS -->
-    <!-- ========================================= -->
-    
-    <!-- ========================================= -->
-    <!-- ESTRUTURA VISUAL DO CARRINHO (LATERAL) -->
-    <!-- ========================================= -->
     <div id="carrinho-aba" class="carrinho-aba fechar">
         <div class="carrinho-header">
             <h2>Seu Carrinho</h2>
@@ -266,9 +247,6 @@
         </div>
     </div>
 
-    <!-- ========================================= -->
-    <!-- RODAPÉ (Corrigido sem duplicidade) -->
-    <!-- ========================================= -->
     <footer>
 
         <div class="fot">
