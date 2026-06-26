@@ -26,8 +26,8 @@
         <h1>Gym Core</h1>
 
         <nav class="link">
-            <a href="cadastrosf.html">Cadastro</a>
-            <a href="loginsf.html">Login</a>
+            <a href="cadastrosf.php">Cadastro</a>
+            <a href="loginsf.php">Login</a>
             <a href="Plano.html">Planos</a>
             <a href="Mais.html">Mais</a>
             <!-- Botão do Carrinho adicionado para integração com o JS -->
@@ -48,13 +48,11 @@
             </div>
 
             <div class="slide">
-                <img src="https://images.pexels.com/photos/6628962/pexels-photo-6628962.jpeg?_gl=1*1dra52m*_ga*MjQ1MDc2OTU2LjE3ODI0MjMyMDg.*_ga_8JE65Q40S6*czE3ODI0MjMyMDckbzEkZzEkdDE3ODI0MjM1NTgkajQ5JGwwJGgw"
-                    alt="Academia">
+                <img src="https://images.pexels.com/photos/6628962/pexels-photo-6628962.jpeg?_gl=1*1dra52m*_ga*MjQ1MDc2OTU2LjE3ODI0MjMyMDg.*_ga_8JE65Q40S6*czE3ODI0MjMyMDckbzEkZzEkdDE3ODI0MjM1NTgkajQ5JGwwJGgw" alt="Academia">
             </div>
 
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="Academia">
+                <img src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Academia">
             </div>
 
         </div>
