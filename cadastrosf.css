@@ -3,11 +3,13 @@
 /* ========================================= */
 
 /* ESSA REGRA É CRUCIAL: Ela impede que inputs e botões fiquem desalinhados ou saiam do container */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #000000, #00363a);
@@ -21,19 +23,19 @@ body{
 /* CONTAINER */
 /* ========================================= */
 
-.container{
-    background: rgba(26, 26, 26, 0.8); /* Corrigido: rgba precisa de valores separados por vírgula e opacidade */
+.container {
+    background: rgba(26, 26, 26, 0.8);
     padding: 40px;
     width: 400px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Corrigido: era '10pxx' e a opacidade estava como '0, 4' */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     text-align: center;
     color: white;
     border: 5px solid #0fbda6ee;
 }
 
-.container h2{
+.container h2 {
     margin-bottom: 25px;
     font-weight: 600;
 }
@@ -42,7 +44,7 @@ body{
 /* FORMULÁRIO */
 /* ========================================= */
 
-form input{
+form input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -55,11 +57,11 @@ form input{
     border: 2px solid #06d3e6da;
 }
 
-form input::placeholder{
+form input::placeholder {
     color: #ddd;
 }
 
-form input:focus{
+form input:focus {
     background: rgba(255, 255, 255, 0.3);
 }
 
@@ -67,7 +69,7 @@ form input:focus{
 /* BOTÃO */
 /* ========================================= */
 
-button{
+button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
@@ -80,46 +82,47 @@ button{
     transition: 0.3s;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Corrigido: opacidade era '0, 3' */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================================= */
 /* LINK LOGIN */
 /* ========================================= */
 
-.link{
+.link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 10px;
+    padding: 1px 15px;
     margin-right: 25px;
     font-size: 14px;
-    background: #06d3e6da; /* Corrigido: linear-gradient precisa de no mínimo duas cores. Mudado para cor sólida. */
+    background: #06d3e6da;
     color: white;
     text-decoration: none;
-    border-radius: 9px;
-    margin-bottom: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.link a{
+.link a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.link a:hover{
+.link a:hover {
     text-decoration: underline;
+    
 }
 
 /* ========================================= */
 /* BOTÃO VOLTAR */
 /* ========================================= */
 
-.bb{
-    display: inline-flex; /* Alterado de inline-block para inline-flex para o 'justify-content' e 'gap' funcionarem */
-    padding: 8px 15px;
+.bb {
+    display: inline-flex;
+    padding: 10px 15px;
     font-size: 14px;
     background: linear-gradient(135deg, #0fbda6ee, #06d3e6da);
     color: white;
