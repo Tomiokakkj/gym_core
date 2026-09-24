@@ -23,6 +23,7 @@ body{
 
 .container{
     background: rgba(26, 26, 26, 0.8); /* Corrigido: rgba precisa de 4 valores ou use hex #1a1a1a */
+    background: transparent !important;
     padding: 40px;
     width: 400px;
     border-radius: 15px;
@@ -30,7 +31,7 @@ body{
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Corrigido: era '10pxx' e a opacidade era '0, 4' */
     text-align: center;
     color: rgb(74, 6, 120);
-    border: 5px solid #0fbda6ee;
+    border: 5px solid #06d3e6da;
 }
 
 .container h2{
@@ -54,11 +55,11 @@ form input{
     color: white;
     font-size: 14px;
     border: 2px solid #06d3e6da;
-    /* O box-sizing: border-box aqui garante que os 12px de padding fiquem DENTRO dos 100% de largura */
+    background: transparent !important;
 }
 
 form input::placeholder{
-    color: #ddd;
+    color: rgba(94, 94, 94, 0.829);
 }
 
 form input:focus{
@@ -75,16 +76,17 @@ button{
     margin-top: 15px;
     border: none;
     border-radius: 8px;
-    background: linear-gradient(135deg, #0fbda6ee, #06d3e6da);
+    background: #06d3e6da;
     color: white;
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 button:hover{
     transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Corrigido: opacidade era '0, 3' */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================================= */
@@ -93,13 +95,14 @@ button:hover{
 
 .link{
     display: inline-block;
-    padding: 8px 15px;
+    padding: 8px 7px;
     font-size: 14px;
-    background: #06d3e6da; /* Corrigido: linear-gradient precisa de pelo menos duas cores */
+    background: #06d3e6da;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     margin-bottom: 15px;
+    
 }
 
 .link a{
@@ -109,7 +112,8 @@ button:hover{
 }
 
 .link a:hover{
-    text-decoration: underline;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* ========================================= */
@@ -123,6 +127,7 @@ button:hover{
     background: #06d3e6da; /* Corrigido: linear-gradient precisa de pelo menos duas cores */
     color: white;
     text-decoration: none;
+    font-weight: bold;
     border-radius: 8px;
     margin-bottom: 15px;
 }
