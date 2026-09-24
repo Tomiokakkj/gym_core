@@ -70,7 +70,7 @@ if(isset($_POST['submit']))
     <!-- FORMULÁRIO DE CADASTRO -->
     <!-- ========================================= -->
 <div class="container">
-        <h2>Cadastro Da Academia</h2>
+        <h2>Cadastro</h2>
 
         <form action="" method="POST">
 
@@ -87,7 +87,6 @@ if(isset($_POST['submit']))
         </form>
 
         <p class="link">
-            Já possui uma conta?
             <a href="loginsf.php">Login</a>
             <br><br>
         </p>
@@ -121,34 +120,6 @@ if(isset($_POST['submit']))
 
 <body>
 
-    <!-- ========================================= -->
-    <!-- FORMULÁRIO DE CADASTRO -->
-    <!-- ========================================= -->
-<div class="container">
-        <h2>Cadastro Da Academia</h2>
-
-        <form action="" method="POST">
-
-            <input type="text" name="nome" placeholder="Nome completo" required>
-
-            <input type="email" name="email" placeholder="E-mail" required>
-
-            <input type="password" name="password" placeholder="Senha" required>
-
-            <input type="password" name="confirm_password" placeholder="Confirmar Senha" required>
-
-            <button type="submit" name="submit">Criar</button>
-
-        </form>
-
-        <p class="link">
-            Já possui uma conta?
-            <a href="loginsf.php">Login</a>
-            <br><br>
-        </p>
-
-        <a class="bb" href="inicialsf.php">Voltar</a>
-    </div>
 
 </body>
 
